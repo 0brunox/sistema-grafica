@@ -113,6 +113,24 @@
             background-color: #c0392b;
         }
 
+        .btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .btn-info:hover {
+            background-color: #138496;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
         /* Cards */
         .card {
             background: white;
@@ -327,9 +345,289 @@
                 display: block;
             }
         }
+
+        /* Welcome Banner */
+        .welcome-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            z-index: 1002;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .welcome-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .welcome-text h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .welcome-text p {
+            font-size: 14px;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .welcome-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .welcome-close:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        /* Welcome Card */
+        .welcome-card {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1003;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .welcome-card-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .welcome-card-content h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .welcome-instructions {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .welcome-instructions h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .welcome-instructions ol {
+            color: #555;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+
+        .welcome-instructions li {
+            margin-bottom: 8px;
+        }
+
+        .welcome-tip {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .welcome-tip p {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        /* Adjust main content when banner is visible */
+        body.has-welcome-banner .main-content {
+            margin-top: 80px;
+        }
+
+        body.has-welcome-banner .sidebar {
+            top: 80px;
+            height: calc(100vh - 80px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .welcome-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .welcome-text h2 {
+                font-size: 16px;
+            }
+
+            .welcome-text p {
+                font-size: 13px;
+            }
+
+            .welcome-card {
+                width: 95%;
+                margin: 20px;
+            }
+
+            .welcome-card-content {
+                padding: 20px;
+            }
+
+            .welcome-card-content h2 {
+                font-size: 20px;
+            }
+        }
+
+        /* Quick item form styles */
+        .quick-item-form {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+        .quick-item-form h4 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        .quick-item-form input,
+        .quick-item-form select,
+        .quick-item-form textarea {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .quick-item-form input:focus,
+        .quick-item-form select:focus,
+        .quick-item-form textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        /* PDF table styles */
+        .pdf-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+            border: 1px solid #dee2e6;
+            padding: 12px 8px;
+        }
+
+        .pdf-table td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        .pdf-table .item-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .pdf-table .item-description {
+            font-size: 12px;
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        /* Frete field styles */
+        .frete-section {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .frete-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .total-breakdown {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .total-breakdown h3 {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .total-breakdown h2 {
+            margin: 10px 0 0 0;
+            font-size: 20px;
+            color: #2c3e50;
+            border-top: 2px solid #3498db;
+            padding-top: 10px;
+        }
     </style>
 </head>
 <body>
+    <!-- Banner de Boas-vindas -->
+    <div id="welcome-banner" class="welcome-banner">
+        <div class="welcome-content">
+            <div class="welcome-text">
+                <h2>Sistema de Gestão para Gráficas - Demonstração Gratuita</h2>
+                <p>Teste todas as funcionalidades! Os dados são salvos localmente no seu navegador.</p>
+            </div>
+            <button class="welcome-close" onclick="closeWelcomeBanner()">×</button>
+        </div>
+    </div>
+
+    <!-- Card de Boas-vindas -->
+    <div id="welcome-card" class="welcome-card">
+        <div class="welcome-card-content">
+            <h2>👋 Bem-vindo ao Sistema de Gestão para Gráficas!</h2>
+            <div class="welcome-instructions">
+                <h3>Como começar:</h3>
+                <ol>
+                    <li>Cadastre seus clientes no menu "Clientes"</li>
+                    <li>Crie orçamentos profissionais com cálculo automático de M²</li>
+                    <li>Converta orçamentos aprovados em faturas</li>
+                    <li>Acompanhe suas contas a receber e pagar</li>
+                    <li>Personalize os dados da sua empresa em "Perfil da Empresa"</li>
+                </ol>
+            </div>
+            <div class="welcome-tip">
+                <p><strong>Dica:</strong> 💡 Todos os dados são salvos automaticamente no seu navegador!</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeWelcomeCard()">Entendi, vamos começar!</button>
+        </div>
+    </div>
+
     <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
     
     <!-- Sidebar -->
@@ -340,6 +638,7 @@
             <li><a href="#" class="nav-link" data-page="orcamentos">Orçamentos</a></li>
             <li><a href="#" class="nav-link" data-page="faturas">Faturas</a></li>
             <li><a href="#" class="nav-link" data-page="clientes">Clientes</a></li>
+            <li><a href="#" class="nav-link" data-page="itens">📦 Itens</a></li>
             <li><a href="#" class="nav-link" data-page="contas-receber">Contas a Receber</a></li>
             <li><a href="#" class="nav-link" data-page="contas-pagar">Contas a Pagar</a></li>
             <li><a href="#" class="nav-link" data-page="relatorios">Relatórios</a></li>
@@ -464,6 +763,30 @@
                             <th>Telefone</th>
                             <th>Email</th>
                             <th>Cidade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Itens Page -->
+        <div id="itens-page" class="page" style="display: none;">
+            <div class="header">
+                <h1>Itens</h1>
+                <button class="btn btn-primary" onclick="showModal('item-modal')">+ Novo Item</button>
+            </div>
+
+            <div class="card">
+                <table id="itens-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Preço por M²</th>
+                            <th>Preço Unitário</th>
+                            <th>Descrição</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -683,6 +1006,7 @@
                         <button type="submit" class="btn btn-primary">💾 Salvar Alterações</button>
                         <button type="button" class="btn btn-success" onclick="exportData()">📥 Exportar Dados</button>
                         <button type="button" class="btn btn-warning" onclick="importData()">📤 Importar Dados</button>
+                        <button type="button" class="btn btn-info" onclick="resetWelcomeMessages()">🔄 Resetar Avisos de Boas-vindas</button>
                     </div>
                 </form>
             </div>
@@ -690,6 +1014,43 @@
     </div>
 
     <!-- Modals -->
+    <!-- Item Modal -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="item-modal-title">Novo Item</h2>
+                <span class="close" onclick="closeModal('item-modal')">×</span>
+            </div>
+            <form id="item-form">
+                <div class="form-group">
+                    <label>Nome do Item*</label>
+                    <input type="text" name="nome" required placeholder="Ex: Banner, Adesivo, Placa de PVC">
+                </div>
+                <div class="form-group">
+                    <label>Categoria*</label>
+                    <select name="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="produto">Produto</option>
+                        <option value="servico">Serviço</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preço por M² (R$)</label>
+                    <input type="number" name="preco_m2" step="0.01" placeholder="0,00">
+                </div>
+                <div class="form-group">
+                    <label>Preço Unitário (R$)</label>
+                    <input type="number" name="preco_unitario" step="0.01" placeholder="0,00">
+                </div>
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <textarea name="descricao" placeholder="Descrição detalhada do item"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Item</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Cliente Modal -->
     <div id="cliente-modal" class="modal">
         <div class="modal-content">
@@ -798,11 +1159,24 @@
                     <textarea name="observacoes"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <h3>Total: R$ <span id="orcamento-total">0,00</span></h3>
+                <div class="frete-section">
+                    <h3>📦 Frete e Totais</h3>
+                    <div class="form-group">
+                        <label>Frete (R$)</label>
+                        <input type="number" name="frete" step="0.01" placeholder="0,00" value="0" onchange="calculateTotal()">
+                    </div>
+
+                    <div class="total-breakdown">
+                        <h3>Subtotal: R$ <span id="orcamento-subtotal">0,00</span></h3>
+                        <h3>Frete: R$ <span id="orcamento-frete">0,00</span></h3>
+                        <h2>Total: R$ <span id="orcamento-total">0,00</span></h2>
+                    </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Salvar Orçamento</button>
+                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('orcamento-modal')">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar Orçamento</button>
+                </div>
             </form>
         </div>
     </div>
@@ -943,11 +1317,46 @@
         // Data Storage
         let db = {
             clientes: [],
+            itens: [
+                {
+                    id: 1,
+                    nome: 'Banner',
+                    categoria: 'produto',
+                    precoM2: 25.00,
+                    precoUnitario: 0,
+                    descricao: 'Banner de lona para impressão digital'
+                },
+                {
+                    id: 2,
+                    nome: 'Adesivo',
+                    categoria: 'produto',
+                    precoM2: 35.00,
+                    precoUnitario: 0,
+                    descricao: 'Adesivo vinil para aplicação'
+                },
+                {
+                    id: 3,
+                    nome: 'Placa de PVC',
+                    categoria: 'produto',
+                    precoM2: 45.00,
+                    precoUnitario: 0,
+                    descricao: 'Placa de PVC rígida para impressão'
+                },
+                {
+                    id: 4,
+                    nome: 'Faixa',
+                    categoria: 'produto',
+                    precoM2: 20.00,
+                    precoUnitario: 0,
+                    descricao: 'Faixa de lona para eventos'
+                }
+            ],
             orcamentos: [],
             faturas: [],
             contasPagar: [],
             nextOrcamentoNum: 137703,
             nextFaturaNum: 1001,
+            nextItemNum: 5,
             empresa: {
                 nome: 'Grafica Comunicação Visual',
                 cnpj: '00.000.000/0001-00',
@@ -979,11 +1388,45 @@
             localStorage.setItem('graficaDB', JSON.stringify(db));
         }
 
+        // Welcome functions
+        function closeWelcomeBanner() {
+            const banner = document.getElementById('welcome-banner');
+            banner.style.display = 'none';
+            document.body.classList.remove('has-welcome-banner');
+            localStorage.setItem('welcomeBannerClosed', 'true');
+        }
+
+        function closeWelcomeCard() {
+            const card = document.getElementById('welcome-card');
+            card.style.display = 'none';
+            localStorage.setItem('welcomeCardClosed', 'true');
+        }
+
+        function showWelcomeCard() {
+            const card = document.getElementById('welcome-card');
+            card.style.display = 'block';
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             loadData();
             updateCurrentDate();
             updateDashboard();
+            
+            // Check if welcome elements should be shown
+            const bannerClosed = localStorage.getItem('welcomeBannerClosed');
+            const cardClosed = localStorage.getItem('welcomeCardClosed');
+            
+            if (!bannerClosed) {
+                document.body.classList.add('has-welcome-banner');
+            } else {
+                document.getElementById('welcome-banner').style.display = 'none';
+            }
+            
+            if (!cardClosed) {
+                // Show welcome card after a short delay
+                setTimeout(showWelcomeCard, 1000);
+            }
             
             // Navigation
             document.querySelectorAll('.nav-link').forEach(link => {
@@ -1000,6 +1443,7 @@
 
             // Forms
             document.getElementById('cliente-form').addEventListener('submit', saveCliente);
+            document.getElementById('item-form').addEventListener('submit', saveItem);
             document.getElementById('orcamento-form').addEventListener('submit', saveOrcamento);
             document.getElementById('fatura-form').addEventListener('submit', saveFatura);
             document.getElementById('conta-pagar-form').addEventListener('submit', saveContaPagar);
@@ -1037,6 +1481,9 @@
                         break;
                     case 'clientes':
                         loadClientes();
+                        break;
+                    case 'itens':
+                        loadItens();
                         break;
                     case 'orcamentos':
                         loadOrcamentos();
@@ -1098,6 +1545,16 @@
                 const form = document.getElementById('orcamento-form');
                 form.removeAttribute('data-edit-id');
                 document.querySelector('#orcamento-modal .modal-header h2').textContent = 'Novo Orçamento';
+                
+                // Clear form and items
+                form.reset();
+                itemCount = 0;
+                document.querySelector('#items-table tbody').innerHTML = '';
+                
+                // Reset totals
+                document.getElementById('orcamento-subtotal').textContent = '0,00';
+                document.getElementById('orcamento-frete').textContent = '0,00';
+                document.getElementById('orcamento-total').textContent = '0,00';
             }
             // Reset title for cliente modal
             if (modalId === 'cliente-modal') {
@@ -1113,6 +1570,11 @@
             if (modalId === 'conta-pagar-modal') {
                 document.getElementById('conta-pagar-modal-title').textContent = 'Nova Conta a Pagar';
                 document.getElementById('conta-pagar-form').removeAttribute('data-edit-id');
+            }
+            // Reset title for item modal
+            if (modalId === 'item-modal') {
+                document.getElementById('item-modal-title').textContent = 'Novo Item';
+                document.getElementById('item-form').removeAttribute('data-edit-id');
             }
         }
 
@@ -1245,9 +1707,45 @@
             const tbody = document.querySelector('#items-table tbody');
             itemCount++;
             
+            // Create select options for items
+            let itemOptions = '';
+            if (db.itens && db.itens.length > 0) {
+                db.itens.forEach(item => {
+                    itemOptions += `<option value="${item.id}" data-preco-m2="${item.precoM2 || 0}" data-preco-unitario="${item.precoUnitario || 0}">${item.nome}</option>`;
+                });
+            }
+            
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td><input type="text" name="item_descricao_${itemCount}" required></td>
+                <td>
+                    <div style="display: flex; gap: 5px; align-items: center;">
+                        <select name="item_id_${itemCount}" onchange="selectItem(${itemCount})" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                            <option value="">Item ▼</option>
+                            ${itemOptions}
+                        </select>
+                        <button type="button" class="btn btn-success" onclick="showQuickItemForm(${itemCount})" style="padding: 8px 12px; font-size: 12px;">+ Novo</button>
+                    </div>
+                    <input type="text" name="item_descricao_${itemCount}" placeholder="Ou digite uma descrição personalizada" style="margin-top: 5px; width: 100%;">
+                    <div id="quick-item-form-${itemCount}" style="display: none; margin-top: 10px; padding: 15px; background: #f8f9fa; border-radius: 4px; border: 1px solid #ddd;">
+                        <h4 style="margin-bottom: 10px;">Criar Novo Item</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                            <input type="text" id="quick-item-name-${itemCount}" placeholder="Nome do item" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                            <select id="quick-item-categoria-${itemCount}" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                <option value="produto">Produto</option>
+                                <option value="servico">Serviço</option>
+                            </select>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                            <input type="number" id="quick-item-preco-m2-${itemCount}" placeholder="Preço por M²" step="0.01" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                            <input type="number" id="quick-item-preco-unitario-${itemCount}" placeholder="Preço unitário" step="0.01" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <textarea id="quick-item-descricao-${itemCount}" placeholder="Descrição (opcional)" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; resize: vertical; min-height: 60px;"></textarea>
+                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                            <button type="button" class="btn btn-primary" onclick="saveQuickItem(${itemCount})" style="padding: 8px 16px;">Salvar Item</button>
+                            <button type="button" class="btn btn-danger" onclick="hideQuickItemForm(${itemCount})" style="padding: 8px 16px;">Cancelar</button>
+                        </div>
+                    </div>
+                </td>
                 <td><input type="number" name="item_qtd_${itemCount}" value="1" min="1" onchange="calculateItemTotal(${itemCount})"></td>
                 <td><input type="number" name="item_largura_${itemCount}" step="0.01" onchange="calculateItemTotal(${itemCount})"></td>
                 <td><input type="number" name="item_altura_${itemCount}" step="0.01" onchange="calculateItemTotal(${itemCount})"></td>
@@ -1264,6 +1762,79 @@
         function removeItem(button) {
             button.closest('tr').remove();
             calculateTotal();
+        }
+
+        function selectItem(itemNum) {
+            const select = document.querySelector(`select[name="item_id_${itemNum}"]`);
+            const selectedOption = select.options[select.selectedIndex];
+            
+            if (selectedOption.value) {
+                const precoM2 = parseFloat(selectedOption.getAttribute('data-preco-m2')) || 0;
+                const precoUnitario = parseFloat(selectedOption.getAttribute('data-preco-unitario')) || 0;
+                
+                // Set the description
+                document.querySelector(`input[name="item_descricao_${itemNum}"]`).value = selectedOption.text;
+                
+                // Set the price per M²
+                document.querySelector(`input[name="item_preco_m2_${itemNum}"]`).value = precoM2.toFixed(2);
+                
+                // Set the unit price
+                document.querySelector(`input[name="item_valor_${itemNum}"]`).value = precoUnitario.toFixed(2);
+                
+                // Recalculate totals
+                calculateItemTotal(itemNum);
+            }
+        }
+
+        function showQuickItemForm(itemNum) {
+            document.getElementById(`quick-item-form-${itemNum}`).style.display = 'block';
+        }
+
+        function hideQuickItemForm(itemNum) {
+            document.getElementById(`quick-item-form-${itemNum}`).style.display = 'none';
+            // Clear form fields
+            document.getElementById(`quick-item-name-${itemNum}`).value = '';
+            document.getElementById(`quick-item-categoria-${itemNum}`).value = 'produto';
+            document.getElementById(`quick-item-preco-m2-${itemNum}`).value = '';
+            document.getElementById(`quick-item-preco-unitario-${itemNum}`).value = '';
+            document.getElementById(`quick-item-descricao-${itemNum}`).value = '';
+        }
+
+        function saveQuickItem(itemNum) {
+            const name = document.getElementById(`quick-item-name-${itemNum}`).value;
+            if (!name) {
+                alert('Por favor, preencha o nome do item');
+                return;
+            }
+
+            const item = {
+                id: db.nextItemNum++,
+                nome: name,
+                categoria: document.getElementById(`quick-item-categoria-${itemNum}`).value,
+                precoM2: parseFloat(document.getElementById(`quick-item-preco-m2-${itemNum}`).value) || 0,
+                precoUnitario: parseFloat(document.getElementById(`quick-item-preco-unitario-${itemNum}`).value) || 0,
+                descricao: document.getElementById(`quick-item-descricao-${itemNum}`).value
+            };
+
+            db.itens.push(item);
+            saveData();
+
+            // Update the select dropdown
+            const select = document.querySelector(`select[name="item_id_${itemNum}"]`);
+            const option = document.createElement('option');
+            option.value = item.id;
+            option.textContent = item.nome;
+            option.setAttribute('data-preco-m2', item.precoM2);
+            option.setAttribute('data-preco-unitario', item.precoUnitario);
+            select.appendChild(option);
+
+            // Select the new item
+            select.value = item.id;
+            selectItem(itemNum);
+
+            // Hide the form
+            hideQuickItemForm(itemNum);
+            showNotification('Item criado com sucesso!');
         }
 
         function calculateItemTotal(itemNum, fromUnitValue = false) {
@@ -1294,14 +1865,25 @@
         }
 
         function calculateTotal() {
-            let total = 0;
+            let subtotal = 0;
             for (let i = 1; i <= itemCount; i++) {
                 const totalElement = document.getElementById(`item_total_${i}`);
                 if (totalElement) {
                     const value = parseFloat(totalElement.textContent.replace('R$ ', '').replace('.', '').replace(',', '.')) || 0;
-                    total += value;
+                    subtotal += value;
                 }
             }
+            
+            // Get frete value
+            const freteInput = document.querySelector('input[name="frete"]');
+            const frete = parseFloat(freteInput ? freteInput.value : 0) || 0;
+            
+            // Calculate total
+            const total = subtotal + frete;
+            
+            // Update display
+            document.getElementById('orcamento-subtotal').textContent = formatCurrency(subtotal);
+            document.getElementById('orcamento-frete').textContent = formatCurrency(frete);
             document.getElementById('orcamento-total').textContent = formatCurrency(total);
         }
 
@@ -1326,6 +1908,7 @@
             form.querySelector('input[name="data"]').value = orcamento.data;
             form.querySelector('input[name="validade"]').value = orcamento.validade;
             form.querySelector('input[name="prazo_entrega"]').value = orcamento.prazoEntrega || '';
+            form.querySelector('input[name="frete"]').value = orcamento.frete || 0;
             form.querySelector('textarea[name="observacoes"]').value = orcamento.observacoes || '';
             
             // Clear existing items
@@ -1338,8 +1921,44 @@
                 const tbody = document.querySelector('#items-table tbody');
                 const row = document.createElement('tr');
                 
+                // Create select options for items
+                let itemOptions = '<option value="">Item ▼</option>';
+                if (db.itens && db.itens.length > 0) {
+                    db.itens.forEach(dbItem => {
+                        const selected = dbItem.nome === item.descricao ? 'selected' : '';
+                        itemOptions += `<option value="${dbItem.id}" data-preco-m2="${dbItem.precoM2 || 0}" data-preco-unitario="${dbItem.precoUnitario || 0}" ${selected}>${dbItem.nome}</option>`;
+                    });
+                }
+                
                 row.innerHTML = `
-                    <td><input type="text" name="item_descricao_${itemCount}" value="${item.descricao}" required></td>
+                    <td>
+                        <div style="display: flex; gap: 5px; align-items: center;">
+                            <select name="item_id_${itemCount}" onchange="selectItem(${itemCount})" style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                ${itemOptions}
+                            </select>
+                            <button type="button" class="btn btn-success" onclick="showQuickItemForm(${itemCount})" style="padding: 8px 12px; font-size: 12px;">+ Novo</button>
+                        </div>
+                        <input type="text" name="item_descricao_${itemCount}" value="${item.descricao}" placeholder="Ou digite uma descrição personalizada" style="margin-top: 5px; width: 100%;">
+                        <div id="quick-item-form-${itemCount}" style="display: none; margin-top: 10px; padding: 15px; background: #f8f9fa; border-radius: 4px; border: 1px solid #ddd;">
+                            <h4 style="margin-bottom: 10px;">Criar Novo Item</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                                <input type="text" id="quick-item-name-${itemCount}" placeholder="Nome do item" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                <select id="quick-item-categoria-${itemCount}" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                    <option value="produto">Produto</option>
+                                    <option value="servico">Serviço</option>
+                                </select>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                                <input type="number" id="quick-item-preco-m2-${itemCount}" placeholder="Preço por M²" step="0.01" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                                <input type="number" id="quick-item-preco-unitario-${itemCount}" placeholder="Preço unitário" step="0.01" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <textarea id="quick-item-descricao-${itemCount}" placeholder="Descrição (opcional)" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; resize: vertical; min-height: 60px;"></textarea>
+                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                <button type="button" class="btn btn-primary" onclick="saveQuickItem(${itemCount})" style="padding: 8px 16px;">Salvar Item</button>
+                                <button type="button" class="btn btn-danger" onclick="hideQuickItemForm(${itemCount})" style="padding: 8px 16px;">Cancelar</button>
+                            </div>
+                        </div>
+                    </td>
                     <td><input type="number" name="item_qtd_${itemCount}" value="${item.qtd}" min="1" onchange="calculateItemTotal(${itemCount})"></td>
                     <td><input type="number" name="item_largura_${itemCount}" value="${item.largura || ''}" step="0.01" onchange="calculateItemTotal(${itemCount})"></td>
                     <td><input type="number" name="item_altura_${itemCount}" value="${item.altura || ''}" step="0.01" onchange="calculateItemTotal(${itemCount})"></td>
@@ -1401,10 +2020,12 @@
                         ...db.orcamentos[index],
                         clienteId: formData.get('cliente'),
                         data: formData.get('data'),
-                        validade: parseInt(formData.get('validade')),
+                        validade: parseInt(formData.get('validade')) || 30,
                         prazoEntrega: formData.get('prazo_entrega'),
                         items: items,
-                        total: total,
+                        subtotal: total,
+                        frete: parseFloat(formData.get('frete')) || 0,
+                        total: total + (parseFloat(formData.get('frete')) || 0),
                         observacoes: formData.get('observacoes')
                     };
                 }
@@ -1412,15 +2033,18 @@
                 showNotification('Orçamento atualizado com sucesso!');
             } else {
                 // Create new
+                const frete = parseFloat(formData.get('frete')) || 0;
                 const orcamento = {
                     id: Date.now(),
                     numero: (db.empresa.prefixo_orcamento || 'N°') + db.nextOrcamentoNum++,
                     clienteId: formData.get('cliente'),
                     data: formData.get('data'),
-                    validade: parseInt(formData.get('validade')),
+                    validade: parseInt(formData.get('validade')) || 30,
                     prazoEntrega: formData.get('prazo_entrega'),
                     items: items,
-                    total: total,
+                    subtotal: total,
+                    frete: frete,
+                    total: total + frete,
                     observacoes: formData.get('observacoes'),
                     status: 'pendente'
                 };
@@ -1444,15 +2068,28 @@
             
             db.orcamentos.forEach(orcamento => {
                 const cliente = db.clientes.find(c => c.id == orcamento.clienteId);
-                const dataValidade = new Date(orcamento.data);
-                dataValidade.setDate(dataValidade.getDate() + orcamento.validade);
+                
+                // Calculate validity date safely
+                let dataValidade = '-';
+                if (orcamento.data && orcamento.validade) {
+                    try {
+                        const baseDate = new Date(orcamento.data);
+                        if (!isNaN(baseDate.getTime())) {
+                            const validityDate = new Date(baseDate);
+                            validityDate.setDate(validityDate.getDate() + parseInt(orcamento.validade));
+                            dataValidade = formatDate(validityDate);
+                        }
+                    } catch (error) {
+                        console.error('Error calculating validity date:', error);
+                    }
+                }
                 
                 tbody.innerHTML += `
                     <tr>
                         <td>${orcamento.numero}</td>
                         <td>${cliente ? cliente.nome : '-'}</td>
                         <td>${formatDate(orcamento.data)}</td>
-                        <td>${formatDate(dataValidade)}</td>
+                        <td>${dataValidade}</td>
                         <td>${formatCurrency(orcamento.total)}</td>
                         <td><span class="badge badge-${getStatusClass(orcamento.status)}">${getStatusText(orcamento.status)}</span></td>
                         <td>
@@ -1874,8 +2511,21 @@
         // PDF Generation for Orçamento
         function generateOrcamentoPDF(orcamento) {
             const cliente = db.clientes.find(c => c.id == orcamento.clienteId);
-            const dataValidade = new Date(orcamento.data);
-            dataValidade.setDate(dataValidade.getDate() + orcamento.validade);
+            
+            // Calculate validity date safely
+            let dataValidade = '-';
+            if (orcamento.data && orcamento.validade) {
+                try {
+                    const baseDate = new Date(orcamento.data);
+                    if (!isNaN(baseDate.getTime())) {
+                        const validityDate = new Date(baseDate);
+                        validityDate.setDate(validityDate.getDate() + parseInt(orcamento.validade));
+                        dataValidade = formatDate(validityDate);
+                    }
+                } catch (error) {
+                    console.error('Error calculating validity date:', error);
+                }
+            }
             
             // Create print window
             const printWindow = window.open('', '_blank');
@@ -1923,7 +2573,7 @@
                     
                     <div>
                         <p><strong>Data de Envio:</strong> ${formatDate(orcamento.data)}</p>
-                        <p><strong>Validade:</strong> ${formatDate(dataValidade)}</p>
+                        <p><strong>Validade:</strong> ${dataValidade}</p>
                         ${orcamento.prazoEntrega ? '<p><strong>Prazo de Entrega:</strong> ' + orcamento.prazoEntrega + '</p>' : ''}
                     </div>
                     
@@ -1932,6 +2582,7 @@
                             <tr>
                                 <th>Item</th>
                                 <th>Descrição</th>
+                                <th>Detalhes</th>
                                 <th>Qtd</th>
                                 <th>Largura</th>
                                 <th>Altura</th>
@@ -1941,23 +2592,32 @@
                             </tr>
                         </thead>
                         <tbody>
-                            ${orcamento.items.map((item, index) => `
-                                <tr>
-                                    <td>${index + 1}</td>
-                                    <td>${item.descricao}</td>
-                                    <td>${item.qtd}</td>
-                                    <td>${item.largura || '-'}</td>
-                                    <td>${item.altura || '-'}</td>
-                                    <td>${item.m2 ? item.m2.toFixed(2) : '-'}</td>
-                                    <td>${formatCurrency(item.valorUnit)}</td>
-                                    <td>${formatCurrency(item.total)}</td>
-                                </tr>
-                            `).join('')}
+                            ${orcamento.items.map((item, index) => {
+                                // Find item details from database
+                                const itemDetails = db.itens.find(i => i.nome === item.descricao);
+                                const itemDescription = itemDetails ? itemDetails.descricao : '';
+                                
+                                return `
+                                    <tr>
+                                        <td>${index + 1}</td>
+                                        <td><strong>${item.descricao}</strong></td>
+                                        <td>${itemDescription || '-'}</td>
+                                        <td>${item.qtd}</td>
+                                        <td>${item.largura || '-'}</td>
+                                        <td>${item.altura || '-'}</td>
+                                        <td>${item.m2 ? item.m2.toFixed(2) : '-'}</td>
+                                        <td>${formatCurrency(item.valorUnit)}</td>
+                                        <td>${formatCurrency(item.total)}</td>
+                                    </tr>
+                                `;
+                            }).join('')}
                         </tbody>
                     </table>
                     
                     <div class="total">
-                        <p>Total: ${formatCurrency(orcamento.total)}</p>
+                        <p>Subtotal: ${formatCurrency(orcamento.subtotal || orcamento.total)}</p>
+                        ${orcamento.frete ? `<p>Frete: ${formatCurrency(orcamento.frete)}</p>` : ''}
+                        <p><strong>Total: ${formatCurrency(orcamento.total)}</strong></p>
                     </div>
                     
                     ${orcamento.observacoes ? '<div><h4>Observações:</h4><p>' + orcamento.observacoes + '</p></div>' : ''}
@@ -1982,7 +2642,27 @@
 
         function formatDate(dateString) {
             if (!dateString) return '-';
-            const date = new Date(dateString + 'T00:00:00');
+            
+            // Handle different date formats
+            let date;
+            if (typeof dateString === 'string') {
+                // If it's already a date string, try to parse it
+                if (dateString.includes('T')) {
+                    date = new Date(dateString);
+                } else {
+                    date = new Date(dateString + 'T00:00:00');
+                }
+            } else if (dateString instanceof Date) {
+                date = dateString;
+            } else {
+                return '-';
+            }
+            
+            // Check if date is valid
+            if (isNaN(date.getTime())) {
+                return '-';
+            }
+            
             return date.toLocaleDateString('pt-BR');
         }
 
@@ -2200,6 +2880,10 @@
         // Close modals on outside click
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
+                // Don't close orcamento modal when clicking outside
+                if (event.target.id === 'orcamento-modal') {
+                    return;
+                }
                 event.target.style.display = 'none';
             }
         }
@@ -2298,6 +2982,106 @@
                 reader.readAsText(file);
             };
             fileInput.click();
+        }
+
+        // Function to reset welcome messages (for demo purposes)
+        function resetWelcomeMessages() {
+            localStorage.removeItem('welcomeBannerClosed');
+            localStorage.removeItem('welcomeCardClosed');
+            location.reload();
+        }
+
+        // Item management functions
+        function loadItens() {
+            const tbody = document.querySelector('#itens-table tbody');
+            tbody.innerHTML = '';
+            
+            if (db.itens && db.itens.length > 0) {
+                db.itens.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.nome}</td>
+                        <td>${getCategoriaName(item.categoria)}</td>
+                        <td>${formatCurrency(item.precoM2 || 0)}</td>
+                        <td>${formatCurrency(item.precoUnitario || 0)}</td>
+                        <td>${item.descricao || '-'}</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="editItem(${item.id})">Editar</button>
+                            <button class="btn btn-danger" onclick="deleteItem(${item.id})">Excluir</button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+        }
+
+        function getCategoriaName(categoria) {
+            const categorias = {
+                'produto': 'Produto',
+                'servico': 'Serviço'
+            };
+            return categorias[categoria] || categoria;
+        }
+
+        function saveItem(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const editId = e.target.getAttribute('data-edit-id');
+            
+            const item = {
+                nome: formData.get('nome'),
+                categoria: formData.get('categoria'),
+                precoM2: parseFloat(formData.get('preco_m2')) || 0,
+                precoUnitario: parseFloat(formData.get('preco_unitario')) || 0,
+                descricao: formData.get('descricao')
+            };
+            
+            if (editId) {
+                // Edit existing
+                const index = db.itens.findIndex(i => i.id === parseInt(editId));
+                if (index !== -1) {
+                    db.itens[index] = { ...db.itens[index], ...item };
+                }
+                e.target.removeAttribute('data-edit-id');
+                showNotification('Item atualizado com sucesso!');
+            } else {
+                // Create new
+                item.id = db.nextItemNum++;
+                db.itens.push(item);
+                showNotification('Item criado com sucesso!');
+            }
+            
+            saveData();
+            closeModal('item-modal');
+            e.target.reset();
+            document.querySelector('#item-modal .modal-header h2').textContent = 'Novo Item';
+            loadItens();
+        }
+
+        function editItem(id) {
+            const item = db.itens.find(i => i.id === id);
+            if (!item) return;
+
+            showModal('item-modal');
+            document.querySelector('#item-modal .modal-header h2').textContent = 'Editar Item';
+            
+            const form = document.getElementById('item-form');
+            form.setAttribute('data-edit-id', id);
+            
+            form.nome.value = item.nome;
+            form.categoria.value = item.categoria;
+            form.preco_m2.value = item.precoM2 || '';
+            form.preco_unitario.value = item.precoUnitario || '';
+            form.descricao.value = item.descricao || '';
+        }
+
+        function deleteItem(id) {
+            if (confirm('Tem certeza que deseja excluir este item?')) {
+                db.itens = db.itens.filter(i => i.id !== id);
+                saveData();
+                loadItens();
+                showNotification('Item excluído com sucesso!');
+            }
         }
     </script>
 </body>
